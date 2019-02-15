@@ -1,2 +1,2 @@
 # Bouncing-drops
-Numerical physics about bouncing drops
+Physics about bouncing drops
