@@ -3,17 +3,17 @@
 ##############
 ## requires pySerial to be installed 
 import serial
-import time as t
+from time import time 
 
 serial_port = '/dev/ttyACM0';
-baud_rate = 9600; #In arduino, Serial.begin(baud_rate)
+baud_rate = 115200; #In arduino, Serial.begin(baud_rate)
 write_to_file_path = "output.txt";
 
-output_file = open(write_to_file_path, "w+");
+output_file = open(write_to_file_path, "w+")
 ser = serial.Serial(serial_port, baud_rate)
-for i in range(10*1000):
-    line = ser.readline();
-    line = line.decode("utf-8") #ser.readline returns a binary, convert to string
-    #print(line);
-    output_file.write(line);
-    t.sleep(0.0001)
+t0 = time()
+while 1==1:
+	line = ser.readline();
+	fline = str(time() - t0)
+	line = line.decode("utf-8") #ser.readline returns a binary, convert to string
+	output_file.write(fline+" "+line);

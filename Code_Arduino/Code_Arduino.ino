@@ -33,7 +33,7 @@ const int zpin = A1;                  // z-axis (only on 3-axis models)
 
 void setup() {
   // initialize the serial communications:
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   // Provide ground and power by using the analog inputs as normal digital pins.
   // This makes it possible to directly connect the breakout board to the
@@ -47,14 +47,14 @@ void setup() {
 
 void loop() {
   // print the sensor values:
-  Serial.print(analogRead(xpin));
+  Serial.print(analogRead(xpin),10);
   // print a tab between values:
   Serial.print(" ");
-  Serial.print(analogRead(ypin));
+  Serial.print(analogRead(ypin),10);
   // print a tab between values:
   Serial.print(" ");
-  Serial.print(analogRead(zpin));
+  Serial.print(analogRead(zpin),10);
   Serial.println();
   // delay before next reading:
-  delay(1);
+  //delay(1);
 }
