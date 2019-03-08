@@ -10,7 +10,7 @@ def f1(File):
 		Ndata = 0	
 		print(int(str(err).split(" ")[-1]))
 		n = int(str(err).split(" ")[-1])
-		if n == 2:
+		if n <= 3:
 			n -= 1
 		fichier = open(File,"r")
 		N = 0
@@ -25,12 +25,13 @@ def f1(File):
 		return((Ndata,True))
 		
 	return((Ndata,False))
-
-filename = "Etalonnage.txt"
+print("fichier")
+fichier = "./"+str(input())
+filename = fichier+"/Etalonnage.txt"
 print("Etalonnage des données : \n Nom du fichier")
 name = str(input())
-Input = name+".txt"
-Output = "Out_"+name+".txt"
+Input = fichier+"/"+name+".txt"
+Output = fichier+"/Out_"+name+".txt"
 
 bol = True
 
