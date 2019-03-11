@@ -8,4 +8,4 @@ in volt to I.S units (m*s^-2).
 These scripts are coded in Python 3, you need to install:
 --pyserial
 --numpy
---glob
+--Tkinter

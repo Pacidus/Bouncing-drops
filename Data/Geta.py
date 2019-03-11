@@ -1,8 +1,8 @@
-"""Code pour obtenir (Get) les valeurs de l'accélération (a)
-envoyées par la carte Arduino."""
-import serial
-from time import time
-import numpy as np
+"""Code pour obtenir (Get) les valeurs de l'accélération (a) envoyées par la carte Arduino."""
+
+import serial						####################
+from time import time					# Nos importations #
+							####################
 
 def Read():
 	serial_port = '/dev/ttyACM0';			#Le port sur lequel est branchée l'Arduino
@@ -48,5 +48,6 @@ def Read():
 	pms = str(1000/f);				#On calcul la periode en ms
 
 	print(f," Hz -> "+pms+" ms");			#On affiche la fréquence d'aquisition et la periode
+	return();
 
 Read();							#On lance le code
