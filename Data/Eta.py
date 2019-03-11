@@ -1,8 +1,8 @@
 """Code pour etalonner (Et) les valeurs de l'accélération (a) envoyées par la carte Arduino."""
 
-import numpy as np
-import os
-import tkinter as tk
+import numpy as np						####################
+import os							# Nos importations #
+import tkinter as tk						####################
 from tkinter.filedialog import askopenfilename
 
 def ask():
@@ -38,7 +38,7 @@ def f1(chemin):
 		if n <= 3:
 			n -= 1;		
 		print("Erreur ligne ",n);
-		Rexclude(n,Name);
+		Rexclude(n,chemin);
 		return((False,True));
 	return((Ndata,False));
 
