@@ -25,7 +25,7 @@ def Read():
 	Dt = float(input());				# On recupère le temps de prise de donées voulue # 
 	t0 = time();					##################################################
 	tmax = t0+Dt;
-	
+	fline = time();
 	while fline < tmax:				#Pour la periode voulue 
 		fline = time();				#On récupère la valeur du temps
 		Apdata(Sread());			#On stocke les valeurs envoyées par l'arduino
