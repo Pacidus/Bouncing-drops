@@ -1,0 +1,11 @@
+#colonne 1 : fréquence en Hz
+#colonne 2 : lambda Faraday en mm
+#colonne 3 : incertitude sur lambda Faraday en mm
+
+20	18.20	0.79
+30	11.25	0.50
+40	8.59	0.40
+60	6.07	0.36
+70	5.22	0.35
+80	4.74	0.34
+90	4.38	0.35
