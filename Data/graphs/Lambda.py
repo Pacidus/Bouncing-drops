@@ -38,7 +38,7 @@ Y	= Data[:,1];
 Y_error	= Data[:,2];
 
 set_xlabel(r'Fréquence en Hz', fontsize=12)
-set_ylabel(r'${\lambda_f}$ en mm', fontsize=12)
+set_ylabel(r'${F_\lambda}$ en mm', fontsize=12)
 
 error(X, Y, yerr=Y_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
 
