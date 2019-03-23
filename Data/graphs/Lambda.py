@@ -33,14 +33,14 @@ grid = plt.grid;
 
 Data = load("./lambda_yohan.txt");
 
-X	= Data[:,0];
-Y	= Data[:,1];
-Y_error	= Data[:,2];
+X	= Data[:,1];
+Y	= Data[:,0];
+X_error	= Data[:,2];
 
-set_xlabel(r'Fréquence en Hz', fontsize=12)
-set_ylabel(r'${F_\lambda}$ en mm', fontsize=12)
+set_ylabel(r'Fréquence en Hz', fontsize=12)
+set_xlabel(r'${F_\lambda}$ en mm', fontsize=12)
 
-error(X, Y, yerr=Y_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
+error(X, Y, xerr=X_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
 
 grid(True);
 plt.savefig('lambda_f.png', dpi=700);
