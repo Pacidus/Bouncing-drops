@@ -63,7 +63,8 @@ grid(True);
 
 plt.savefig('lambda_fexp.png', dpi=700);
 
-plt.plot(x,y,"k--", label = r'$\frac{1}{\pi}\sqrt{}$');
+plt.plot(x,y,"gray");
+error(X, Y, xerr=X_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
 
 plt.savefig('lambda_fth.png', dpi=700);
 
