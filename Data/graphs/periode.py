@@ -35,8 +35,8 @@ grid = plt.grid;
 Data = load("./periode_yohan.txt");
 
 X	= Data[:,0];
-Y	= Data[:,2];
 X_error	= Data[:,1];
+Y	= Data[:,2];
 Y_error	= Data[:,3];
 
 def func(x,a):
@@ -45,7 +45,6 @@ def func(x,a):
 popt, pcov = curve_fit(func, X, Y);
 
 print(*popt,"+-",*pcov[0]);
-
 x = np.linspace(0,X.max()+1,1000);
 y = func(x,*popt);
 
@@ -59,9 +58,8 @@ grid(True);
 
 plt.savefig('period.png', dpi=700);
 
-plt.plot(x,y,"gray");
+plt.plot(x,y,"gray",label=r"$a = %.3f \pm %.3f $ \\ $f(x) = a \times x$" %(*popt,*pcov));
 error(X, Y, xerr=X_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
-
+plt.legend();
 plt.savefig('period_fth.png', dpi=700);
-
 show();
