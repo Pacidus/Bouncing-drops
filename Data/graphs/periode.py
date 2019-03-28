@@ -48,6 +48,8 @@ perr = np.sqrt(np.diag(pcov));
 print(*popt,"+-",*perr)
 x = np.linspace(0,X.max()+1,1000);
 y = func(x,*popt);
+y1 = func(x,*(popt+perr));
+y2 = func(x,*(popt-perr));
 
 set_ylabel(r'Période en s', fontsize=12)
 
@@ -63,4 +65,12 @@ plt.plot(x,y,"gray",label=r"~\\ $a = %.3f \pm %.3f $ \\ $b = %.3f \pm %.3f$ \\$f
 error(X, Y, xerr=X_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
 plt.legend();
 plt.savefig('period_fth.png', dpi=700);
+
+plt.plot(x,y,"gray",label=r"~\\ $a = %.3f \pm %.3f $ \\ $b = %.3f \pm %.3f$ \\$f(x) = a \times x + b$" %(popt[0],perr[0],popt[1],perr[1]));
+plt.plot(x,y1,"k--");
+plt.plot(x,y2,"k--");
+
+error(X, Y, xerr=X_error, fmt='.', ecolor='red',color='blue', capsize=2.5);
+plt.legend();
+plt.savefig('period_fthinc.png', dpi=700);
 show();
