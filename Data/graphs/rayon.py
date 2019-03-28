@@ -67,6 +67,6 @@ plt.plot(x,y2,"--",label=r"$d_2 = %.3f \pm %.3f $" %(popt2[0],perr2[0]));
 plt.legend();
 grid(True);
 
-plt.savefig('period.png', dpi=700);
+plt.savefig('rayon.png', dpi=700);
 show();
 
