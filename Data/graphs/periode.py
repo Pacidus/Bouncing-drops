@@ -42,7 +42,7 @@ Y_error	= Data[:,3];
 def func(x,a):
 	return(a*x);
 
-popt, pcov = curve_fit(func, X, Y);
+popt, pcov = curve_fit(func, X, Y, sigma = Y_error);
 
 print(*popt,"+-",*pcov[0]);
 x = np.linspace(0,X.max()+1,1000);
