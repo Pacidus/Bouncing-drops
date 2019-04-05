@@ -47,6 +47,15 @@ Y	= Data[:,2];
 Y_error	= Data[:,3];
 error(X, Y, xerr=X_error, yerr=Y_error, fmt='>',capsize=2.5,label = "60 Hz");
 
+
+Data = load("./Frontièremort.txt");
+
+X	= Data[:,0];
+X_error	= Data[:,1];
+Y	= Data[:,2];
+Y_error	= Data[:,3];
+error(X, Y, xerr=X_error, yerr=Y_error, fmt='<',capsize=2.5,label = "80 Hz");
+
 Data = load("./mort_100Hz.txt");
 
 X	= Data[:,0];
