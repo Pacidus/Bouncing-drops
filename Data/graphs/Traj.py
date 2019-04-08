@@ -33,18 +33,20 @@ grid = plt.grid;
 
 Data = load("./953G1");
 
-X	= Data[:,1];
-Y	= Data[:,2];
+start = 25;
 
-plot(X,Y);
+X1	= Data[start:,1];
+Y1	= Data[start:,2];
+
+plot(X1,Y1,'-o');
 
 
 Data = load("./953G2");
 
-X	= Data[:,1];
-Y	= Data[:,2];
+X2	= Data[start:,1];
+Y2	= Data[start:,2];
 
-plot(X,Y);
+plot(X2,Y2,'-o');
 
 set_xlabel(r'x en mm', fontsize=12);
 set_ylabel(r'y en mm', fontsize=12);
