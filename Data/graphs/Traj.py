@@ -48,10 +48,12 @@ Y2	= Data[start:,2];
 
 plot(X2,Y2,'-o');
 
+plot((X2+X1)/2,(Y2+Y1)/2,'k-', label = "Centre de masse");
+
 set_xlabel(r'x en mm', fontsize=12);
 set_ylabel(r'y en mm', fontsize=12);
 
-#plt.legend();
+plt.legend();
 grid(True);
 plt.savefig('Traj1.png', dpi=700);
 
@@ -85,8 +87,9 @@ plot(X2,Y2,'-o');
 set_xlabel(r'x en mm', fontsize=12);
 set_ylabel(r'y en mm', fontsize=12);
 
-#plt.legend();
+plt.legend();
 grid(True);
+
 plt.savefig('Traj2.png', dpi=700);
 
 show();
@@ -100,7 +103,7 @@ plot(T,R,'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
 set_ylabel(r'Diamètre en mm', fontsize=12);
-
+plt.legend();
 plt.savefig('Distraj2.png', dpi=700);
 
 show();
@@ -111,12 +114,14 @@ f = 200;
 plot(X1[i:f],Y1[i:f],'-o');
 plot(X2[i:f],Y2[i:f],'-o');
 
+plot((X2[i:f]+X1[i:f])/2,(Y2[i:f]+Y1[i:f])/2,'k-', label = "Centre de masse");
+
 set_xlabel(r'x en mm', fontsize=12);
 set_ylabel(r'y en mm', fontsize=12);
 grid(True);
 plt.savefig('Trot.png', dpi=700);
 show();
-
+plt.legend();
 plot(T[i:f]-T[i],R[i:f],'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
@@ -131,9 +136,12 @@ f = -1;
 plot(X1[i:f],Y1[i:f],'-o');
 plot(X2[i:f],Y2[i:f],'-o');
 
+plot((X2[i:f]+X1[i:f])/2,(Y2[i:f]+Y1[i:f])/2,'k-', label = "Centre de masse");
+
 set_xlabel(r'x en mm', fontsize=12);
 set_ylabel(r'y en mm', fontsize=12);
 grid(True);
+plt.legend();
 plt.savefig('Straj.png', dpi=700);
 show();
 
