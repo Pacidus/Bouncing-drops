@@ -54,4 +54,29 @@ set_ylabel(r'y en mm', fontsize=12);
 #plt.legend();
 grid(True);
 plt.savefig('Traj1.png', dpi=700);
+
+show();
+Data = load("./953G1");
+
+X1	= Data[:,1];
+Y1	= Data[:,2];
+
+Data = load("./953G2");
+
+X2	= Data[:,1];
+Y2	= Data[:,2];
+
+X = X1-X2;
+Y = Y1-Y2;
+R = np.sqrt(X*X+Y*Y);
+T = Data[:,0];
+T -= T[0]; 
+
+plot(T,R,'-x');
+
+set_xlabel(r'Temps en s', fontsize=12);
+set_ylabel(r'Diamètre en mm', fontsize=12);
+
+plt.savefig('Distraj1.png', dpi=700);
+
 show();
