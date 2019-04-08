@@ -67,7 +67,7 @@ plot(T,R,'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
 set_ylabel(r'Diamètre en mm', fontsize=12);
-
+grid(True);
 plt.savefig('Distraj1.png', dpi=700);
 
 show();
@@ -95,7 +95,7 @@ X = X1-X2;
 Y = Y1-Y2;
 R = np.sqrt(X*X+Y*Y);
 T -= T[0]; 
-
+grid(True);
 plot(T,R,'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
@@ -121,7 +121,7 @@ plot(T[i:f]-T[i],R[i:f],'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
 set_ylabel(r'Diamètre en mm', fontsize=12);
-
+grid(True);
 plt.savefig('Distrot.png', dpi=700);
 show();
 
@@ -141,6 +141,6 @@ plot(T[i:f]-T[i],R[i:f],'-x');
 
 set_xlabel(r'Temps en s', fontsize=12);
 set_ylabel(r'Diamètre en mm', fontsize=12);
-
+grid(True);
 plt.savefig('Distraj.png', dpi=700);
 show();
